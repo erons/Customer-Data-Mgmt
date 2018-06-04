@@ -29,7 +29,8 @@ new Vue({
   router,
   template: `
    <div id= "app">
-   <nav class="navbar navbar-default">
+   <nav class="navbar navbar-expand-sm navbar-dark bg-dark ">
+        <a class="navbar-brand" href="#">mCustomers</a>
    <div class="container">
      <div class="navbar-header">
        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -38,7 +39,6 @@ new Vue({
          <span class="icon-bar"></span>
          <span class="icon-bar"></span>
        </button>
-       <a class="navbar-brand" href="#">Mcustomers</a>
      </div>
      <div id="navbar" class="collapse navbar-collapse">
        <ul class="nav navbar-nav">
