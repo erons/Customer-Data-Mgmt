@@ -6,16 +6,20 @@ import VueRouter from 'vue-router'
 import vueResource from 'vue-resource'
 import Customers from './components/Customers'
 import About from './components/About'
-
+import Add from './components/Add'
+import CustomerDetails from './components/CustomerDetails'
 //Middleware
 Vue.use(vueResource);
 Vue.use(VueRouter);
 
 Vue.config.productionTip = false
 
+//Routes to all components
 const  routes = [
     {path:'/', component: Customers},
     {path: '/about', component: About},
+    {path: '/add', component: Add},
+    {path: '/customer/:id', component: CustomerDetails},
 ];
 
 const router = new VueRouter ({
@@ -44,6 +48,9 @@ new Vue({
        <ul class="nav navbar-nav">
          <li><router-link to="/">Home</router-link></li>
          <li><router-link to="/about">About</router-link></li>
+       </ul>
+       <ul class="nav navbar-nav navbar-right">
+         <li><router-link to="/add">Add Customer</router-link></li>
        </ul>
      </div><!--/.nav-collapse -->
    </div>

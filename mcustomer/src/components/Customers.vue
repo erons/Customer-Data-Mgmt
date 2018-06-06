@@ -1,5 +1,6 @@
 <template>
   <div class="customers container">
+    <Alert v-if="alert" v-bind:message="alert" />
     <h1 class="page-header">Manage Customers</h1>
     <table class="table table-striped">
       <thead>
@@ -15,6 +16,7 @@
           <td>{{customer.first_name}}</td>
           <td>{{customer.last_name}}</td>
           <td>{{customer.email}}</td>
+          <td><router-link class="btn btn-default" v-bind:to="'/customer/'+customer.id"/router-link>View</td>
         </tr>
       </tbody>
     </table>
@@ -22,23 +24,34 @@
 </template>
 
 <script>
+import Alert from './Alert';
 export default {
   name: 'customers',
   data () {
     return {
-      customers: []
+      customers: [],
+      alert:''
     }
   },
   methods: {
     fetchCustomers(){
-        this.$http.get('http://slimapp/api/customers')
+        this.$http.get('http://mgmtapp/api/customers')
          .then(function(response){
-           console.log(response.body);
+           this.customers = JSON.parse(response.body);
          });
     }
   },
   created: function(){
+    if(this.$route.query.alert){
+      this.alert = this.$route.query.alert;
+    }
     this.fetchCustomers();
+  },
+  updated: function(){
+    this.fetchCustomers();
+  },
+  components: {
+    Alert
   }
 }
 </script>
