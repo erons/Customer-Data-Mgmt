@@ -1,8 +1,8 @@
 <template>
-  <div class="add container">
+  <div class="edit container">
     <Alert v-if="alert" v-bind:message= "alert" />
     <h1 class="page-header">Add Customer</h1>
-    <form v-on:submit="addCustomer">
+    <form v-on:submit="updateCustomer">
 
       <div class="well">
            <h4>Customer Info</h4>
@@ -56,15 +56,21 @@ export default {
   data () {
     return {
       customer: {},
-      alert:''
+      alert: ''
     }
   },
   methods: {
-    addCustomer(e){
+    fetchCustomer(id){
+      this.$http.get('http://mgmtapp/api/customer/'+id)
+       .then(function(response){
+         this.customer = JSON.parse(response.body);
+       });
+    },
+    updateCustomer(e){
       if (!this.customer.first_name || !this.customer.last_name || !this.customer.email){
-          this.alert = 'Please fill in all required fiels';
+          this.alert ='Please fill in all required fiels';
       } else {
-          let newCustomer = {
+          let updateCustomer = {
              first_name: this.customer.first_name,
              last_name: this.customer.last_name,
              phone: this.customer.phone,
@@ -73,9 +79,9 @@ export default {
              city: this.customer.city,
              state: this.customer.state
           }
-          this.$http.post('http://mgmtapp/api/customer/add', newCustomer)
+          this.$http.put('http://mgmtapp/api/customer/update'+this.route.params.id, updateCustomer)
             .then(function(response){
-              this.$router.push({path: '/', query: {alert: 'Customer added'}});
+              this.$router.push({path: '/', query: {alert: 'Customer updated'}});
 
             });
 
@@ -85,8 +91,11 @@ export default {
 
     }
   },
-  components: {
-      Alert
+  created: function(){
+    this.fetchCustomer(this.$route.params.id);
+  },
+  components:{
+    Alert
   }
   }
 

@@ -8,6 +8,8 @@ import Customers from './components/Customers'
 import About from './components/About'
 import Add from './components/Add'
 import CustomerDetails from './components/CustomerDetails'
+import Edit from './components/Edit'
+
 //Middleware
 Vue.use(vueResource);
 Vue.use(VueRouter);
@@ -20,6 +22,7 @@ const  routes = [
     {path: '/about', component: About},
     {path: '/add', component: Add},
     {path: '/customer/:id', component: CustomerDetails},
+    {path: '/edit/:id', component: Edit},
 ];
 
 const router = new VueRouter ({
