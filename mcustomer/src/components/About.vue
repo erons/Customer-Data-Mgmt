@@ -1,6 +1,8 @@
 <template>
   <div class="about container">
     <h1 class="page-header">About</h1>
+    <p> A web application to manage customer information, developed using Vue Framework </p>
+    <p> Version 1.0 </p>
   </div>
 </template>
 
