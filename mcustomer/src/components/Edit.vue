@@ -68,7 +68,7 @@ export default {
     },
     updateCustomer(e){
       if (!this.customer.first_name || !this.customer.last_name || !this.customer.email){
-          this.alert ='Please fill in all required fiels';
+          this.alert = 'Please fill in all required fields';
       } else {
           let updateCustomer = {
              first_name: this.customer.first_name,

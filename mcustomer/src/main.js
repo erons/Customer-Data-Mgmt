@@ -37,7 +37,7 @@ new Vue({
   template: `
    <div id= "app">
    <nav class="navbar navbar-expand-sm navbar-dark bg-dark ">
-        <a class="navbar-brand" href="#">mCustomers</a>
+        <a class="navbar-brand" href="#">Customers</a>
    <div class="container">
      <div class="navbar-header">
        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
