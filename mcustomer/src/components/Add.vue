@@ -75,6 +75,7 @@ export default {
           }
           this.$http.post('http://mgmtapp/api/customer/add', newCustomer)
             .then(function(response){
+              //redirects the user to homepage after successfully completing this operation
               this.$router.push({path: '/', query: {alert: 'Customer added'}});
 
             });
