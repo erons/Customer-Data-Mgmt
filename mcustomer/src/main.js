@@ -36,7 +36,7 @@ new Vue({
   router,
   template: `
    <div id= "app">
-   <nav class="navbar navbar-default ">
+   <nav class="navbar navbar-inverse ">
         <a class="navbar-brand" href="#">Customers</a>
    <div class="container">
      <div class="navbar-header">
