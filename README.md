@@ -19,7 +19,7 @@ As a result, we went with a web application for Customer Data Management, develo
 - Erons (erons) (11009525): responsible for the Frontend and API Documentation
 
 ## Code Bases
-[Front End](https://github.com/erons/Customer-Mgmt/tree/Test).
+[Front End](https://github.com/erons/Customer-Data-Mgmt).
 [Back End](https://github.com/Sankarsap/Mgmtapp/tree/dev).
 
 
