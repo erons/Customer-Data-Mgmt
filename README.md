@@ -1,4 +1,4 @@
-# Technical Demo: "Customer Data Management"
+# Technical Demo: Customer Data Management
 > The management platform for DBG's new API strategy
 
 The target was to explore the flexibility and utility of the Vue.js Framework for Frontend application development, to see if it was a valid alternative to established options like Angular.js and React.js.
