@@ -1,5 +1,4 @@
 # Technical Demo: Customer Data Management
-> The management platform for DBG's new API strategy
 
 The target was to explore the flexibility and utility of the Vue.js Framework for Frontend application development, to see if it was a valid alternative to established options like Angular.js and React.js.
 As well as it's usability with a back end solution, for which we chose the SLIM framework - mainly for it's supposed ease of use as a micro php framework to enable quick development of Rest API.
@@ -36,9 +35,9 @@ The API was documented via Swagger, and can be found [here](https://app.swaggerh
 The Rest API Back end part Unit test done with Resteasy Utility tool and screenshot will be available in (URL: https://github.com/Sankarsap/Mgmtapp/blob/dev/REST%20API%20-%20Backend%20Unit%20Test.docx)
 
 
->Other Features contained within our project include:
->API Documentation
->REST API
->RESTful API Modelling Language
->HTML Development
->Database queries (SQL)
+## Other Features contained within our project include:
+- API Documentation
+- REST API
+- RESTful API Modelling Language
+- HTML Development
+- Database queries (SQL)
